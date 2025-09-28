@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+ <style>
+  :root {
+  --bg-color: #fff8f0;
+  --text-color: #2e2a26;
+  --accent-color: #d31a1a;
+  --card-bg: #e3d8d8;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0eae2;
+  --accent-color: red;
+  --card-bg: #302d2d;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  color: var(--text-color);
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(10px); 
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid var(--accent-color);
+  border-radius: 0; 
+  background: transparent;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+
+input::placeholder {
+  color: #eee;
+}
+
+button {
+  width: 100%;
+padding: 12px;
+  margin-top: 15px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  color: var(--card-bg);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--bg-color);
+  color:var(--text-color);
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+span {
+  color: var(--accent-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+ </style>
+</head>
+<body style=" background: url('/images/log.jpg') center/cover no-repeat;">
+  <div class="containerlogin">
+    
+    <div id="login-form" class="form-box">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="password" required>
+      <a href="/Resturant.html/index.html"><button>Login</button></a>
+      <p>Don't have acount<span onclick="showRegister()">Create anew account</span></p>
+    </div>
+
+    <div id="register-form" class="form-box" style="display: none;">
+      <h2>create account</h2>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="password" required>
+      
+      <p>Have acoount<span onclick="showLogin()"><a href="/Resturant.html/login.html"><button>register</button></a></span></p>
+    </div>
+  </div>
+<script src="/Js/main.js"></script>
+</body>
+</html>

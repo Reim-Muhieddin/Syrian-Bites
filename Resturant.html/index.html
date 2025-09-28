@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syrian Bites</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fas fa-utensils"></i> Syrian Bites</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu-section">Menu</a>
+      <a href="#contact-section">Contact</a>
+    </nav>
+    <div class="actions">
+      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+     <button id="toggleAuth"><a href="/Resturant.html/login.html"><i class="fas fa-user"></a></i></button>
+    </div>
+  </header>
+
+  <section id="hero">
+   <br>
+   <br>
+   <br>
+   <h1>
+    <span class="word">Welcome to Syrian Bits Resturant</span>
+    <br>
+    <br>
+    <p>Authentic flavors from the heart of the Middle East</p><br>
+  </h1>
+      <button id="btnh"><i class="fas fa-concierge-bell"></i> Order Now</button>
+    </div>
+  </section>
+
+  <section id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        We are a Syrian-born project that blends tradition with innovation. From the heart of Aleppo to the tables of the world, our journey is rooted in flavor, culture, and passion.
+      </p>
+      <p>
+        Our mission is to offer a unique experience that combines refined taste with cultural warmth—honoring heritage while presenting it in a modern, elegant way.
+      </p>
+    </div>
+      <div class="about-image">
+      <img src="/images/ِAbout.png" alt="Our Team">
+    </div>
+  </div>
+</section>
+<section id="menu-section">
+  <div class="menu-buttons">
+    <button onclick="showCategory('main')">Main Dishes</button>
+    <button onclick="showCategory('appetizers')">Appetizers</button>
+  </div>
+
+  <div class="carousel-container">
+    <button class="arrow left" onclick="scrollCards(-1)">&#10094;</button>
+
+    <div class="carousel-track" id="main-cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/maqlouba.jpg" alt="Maqluba">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Maqluba</h3>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/kosalabn.jpg" alt="Grape Leaves">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Stuffed Zucchini in yogurt saure</h3>
+      </div>
+     <div class="card">
+        <div class="card-image">
+          <img src="/images/k.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Kibbeh</h3>
+      </div><div class="card">
+        <div class="card-image">
+          <img src="/images/ozi.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Ouzi</h3>
+      </div><div class="card">
+        <div class="card-image">
+          <img src="/images/fal.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Falafel</h3>
+      </div><div class="card">
+        <div class="card-image">
+          <img src="/images/yapraq.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Yapraq</h3>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/kosamhshi.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Khosa mhshi</h3>
+      </div>
+    </div>
+
+    <div class="carousel-track hidden" id="appetizers-cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/tabola.jpg" alt="mmus">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Taboula</h3>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/mtabl.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>mtabl</h3>
+      </div>
+     <div class="card">
+        <div class="card-image">
+          <img src="/images/fateh.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        <h3>Hummus fatteh</h3>
+      </div><div class="card">
+        <div class="card-image">
+          <img src="/images/cake.jpg" alt="Fattoush">
+          <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+        </div>
+        
+       
+      </div>
+    </div>
+
+    <button class="arrow right" onclick="scrollCards(1)">&#10095;</button>
+  </div>
+</section>
+<div id="dish-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-image" src="" alt="">
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <button onclick="purchaseDish()">Buy</button>
+    <p id="confirmation-message" class="hidden">✅thank you, it's Done</p>
+  </div>
+</div>
+
+  <section id="reservation">
+    
+    <form id="rev">
+      <h2>Reserve a Table</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="date" required />
+      <input type="time" required />
+      <input type="number" placeholder="Guests" required />
+      <button type="submit"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </form>
+  </section>
+  <div class="feedback-container">
+  <div class="feedback left">
+    <p>"The website feels like stepping into a dream. The animations are smooth, and the layout is simply magical!"</p>
+    <span>Reim ^-^</span>
+  </div>
+
+  <div class="feedback right">
+    <p>"I could almost smell the spices through the screen. The storytelling and dish descriptions are mouthwatering!"</p>
+    <span>wiliam *_*</span>
+  </div>
+</div>
+
+
+<section id="contact-section" class="contact-section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+    <div class="contact-form">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+
+        <button type="submit">Submit </button>
+      </form>
+    </div>
+
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10794.93421766269!2d36.276527!3d33.513807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f171d1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2z2KfZhNiv2YjYsdmK2Kkg2KfZhNiv2YjYsdmK2Kkg2KfZhNiv2YjYsdmK2Kkg!5e0!3m2!1sar!2s!4v1690000000000!5m2!1sar!2s" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <hr >
+      <p><i class="fas fa-envelope"></i> Syrian Bites@gmail.com</p>
+    <p><i class="fas fa-phone"></i> +963--962-762-237</p>
+   
+     <div class="social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p> 2025 Syrian Bits. All rights reserved.</p>
+   
+  </footer>
+
+  <script src="/Js/main.js"></script>
+</body>
+</html>
